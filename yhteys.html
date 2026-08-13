@@ -13,12 +13,9 @@
     <header>
         <h1>Yhteys</h1>
         <p>Haluatko ottaa minuun yhteyttä? Lähetä minulle viesti!</p>
-        <h2>Navigaatio</h2>
         <nav>
-            <ul>
-                <li><a href="index.html" target="_blank" rel="noopener noreferrer">Etusivu</a></li>
-                <li><a href="kuvagalleria.html" target="_blank" rel="noopener noreferrer">Kuvagalleria</a></li>
-            </ul>
+            <a href="index.html" target="_blank" rel="noopener noreferrer">Etusivu</a>
+            <a href="kuvagalleria.html" target="_blank" rel="noopener noreferrer">Kuvagalleria</a>
         </nav>
     </header>
     <main>
@@ -31,6 +28,51 @@
             <a href="https://www.linkedin.com/in/violeta-bielinska-9b9603398/?locale=en" target="_blank"
                 rel="noopener noreferrer">LinkedIn</a>
         </address>
+
+        <form action="#" method="post">
+
+            <label for="nimi">Nimi:</label>
+            <input type="text" id="nimi" name="nimi" required>
+
+            <label for="sahkoposti">Sähköposti:</label>
+            <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+            <label for="aihe">Aihe:</label>
+            <input type="text" id="aihe" name="aihe" required>
+
+            <label for="viesti">Viesti:</label>
+            <textarea id="viesti" name="viesti" rows="6" required></textarea>
+
+            <button type="submit">Lähetä</button>
+
+        </form>
+
+        <form action="#" method="post">
+
+            <label for="kayttajanimi">Käyttäjänimi:</label>
+            <input type="text" id="kayttajanimi" name="kayttajanimi" required>
+
+            <label for="sahkoposti">Sähköposti:</label>
+            <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+            <label for="salasana">Salasana:</label>
+            <input type="password" id="salasana" name="salasana" required>
+
+            <label for="salasanan-vahvistus">Salasanan vahvistus:</label>
+            <input type="password" id="salasanan-vahvistus" name="salasanan-vahvistus" required>
+
+            <label for="syntymapaiva">Syntymäpäivä:</label>
+            <input type="date" id="syntymapaiva" name="syntymapaiva" required>
+
+            <label>
+                <input type="checkbox" name="kayttoehdot" required>
+                Hyväksyn käyttöehdot
+            </label>
+
+            <button type="submit">Rekisteröidy</button>
+
+        </form>
+
     </main>
     <footer>
         <p>&copy; 2026 Violeta Bielinska</p>
