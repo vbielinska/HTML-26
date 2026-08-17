@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,75 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../favicon.png">
 </head>
+
 <body>
-    <h1>Rekisteröityminen</h1>
+    <form action="https://httpbin.org/post" method="post">
+        <h1>Rekisteröityminen</h1>
+        <fieldset>
+            <legend>Opiskelijan henkilötiedot</legend>
+            <div>
+                <label for="firstname">Nimi</label>
+                <input type="text" id="firstname" name="firstname" required autofocus>
+            </div>
+            <div>
+                <label for="lastname">Sukunimi</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div>
+                <p>Sukupuoli:</p>
+                <input type="radio" id="gender-nainen" name="gender" value="nainen" checked>
+                <label for="gender-nainen">Nainen</label>
+                <input type="radio" id="gender-mies" name="gender" value="mies">
+                <label for="gender-mies">Mies</label>
+                <input type="radio" id="gender-muu" name="gender" value="muu">
+                <label for="gender-muu">Muu</label>
+            </div>
+
+            <div>
+                <label for="birthday">Syntymäpäivä</label>
+                <input type="date" name="birthday" id="birthday">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tunnistetiedot</legend>
+            <div>
+                <label for="email">Sähköposti:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="password">Salasana</label>
+                <input type="password" name="password" id="password">
+            </div>
+        </fieldset>
+
+        <!-- <div>
+            Course
+        </div> -->
+
+        <fieldset>
+            <legend>Ehdot</legend>
+            <div>
+                <p>Haluatko saada päivityksiä sähköpostitse?</p>
+                <input type="radio" id="updates-yes" name="updates" value="kyllä" checked>
+                <label for="updates-yes">Kyllä</label>
+                <input type="radio" id="updates-no" name="updates" value="ei">
+                <label for="updates-no">Ei</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="accept-terms" name="accept-terms" value="hyväksyä">
+                <label for="accept-terms">Hyväksyn käyttöehdot</label>
+            </div>
+
+            <div>
+                <button type="submit">Lähetä</button>
+                <button type="reset">Nollaa</button>
+            </div>
+
+        </fieldset>
+    </form>
 </body>
+
 </html>
