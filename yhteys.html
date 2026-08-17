@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="fi">    
+<html lang="fi">
 
-<head>  
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yhteys</title>
@@ -29,7 +29,29 @@
         </address>
 
         <h2>Lähetä viesti</h2>
-            
+        <form action="https://httpbin.org/post" method="post">
+            <fieldset>
+                <div>
+                    <label for="name">Nimi: </label>
+                    <input type="text" id="name" name="name" placeholder="Nimesi" autocomplete="on" required>
+                </div>
+                <div>
+                    <label for="email">Sähköposti: </label>
+                    <input type="email" id="email" name="email" autocomplete="off" placeholder="Sähköpostisi" required>
+                </div>
+                <div>
+                    <label for="message">Viesti: </label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Kirjoita viestisi tähän"></textarea>
+                    
+                </div>
+                <div>
+                    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Lähetä</button>
+                    <button type="reset">Nollaa</button>
+                </div>
+            </fieldset>
+        </form>
 
     </main>
     <footer>
