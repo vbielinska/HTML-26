@@ -7,6 +7,63 @@
     <title>Rekisteröityminen</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .radio-options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .radio-option label {
+            display: inline;
+            margin: 0;
+            padding: 0px 0 0 10px;
+
+        }
+
+        .radio-option input[type="radio"] {
+            width: auto;
+            margin: 0 0 0 10px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .checkbox-option label {
+            display: inline;
+            margin: 0;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 10px;
+            width: 100px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        textarea {
+            width: 30%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,73 +72,68 @@
         <h1>Rekisteröityminen</h1>
         <fieldset>
             <legend>Opiskelijan henkilötiedot</legend>
-            <div>
-                <label for="firstname">Nimi</label>
-                <input type="text" id="firstname" name="firstname" required autofocus>
-            </div>
-            <div>
-                <label for="lastname">Sukunimi</label>
-                <input type="text" id="lastname" name="lastname" required>
-            </div>
-            <div>
-                <p>Sukupuoli:</p>
-                <input type="radio" id="gender-nainen" name="gender" value="nainen" checked>
+
+            <label for="firstname">Nimi</label>
+            <input type="text" id="firstname" name="firstname" required autofocus>
+
+            <label for="lastname">Sukunimi</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <p>Sukupuoli</p>
+            <div class="radio-option">
                 <label for="gender-nainen">Nainen</label>
-                <input type="radio" id="gender-mies" name="gender" value="mies">
+                <input type="radio" id="gender-nainen" name="gender" value="nainen" checked>
+
                 <label for="gender-mies">Mies</label>
-                <input type="radio" id="gender-muu" name="gender" value="muu">
+                <input type="radio" id="gender-mies" name="gender" value="mies">
+
                 <label for="gender-muu">Muu</label>
+                <input type="radio" id="gender-muu" name="gender" value="muu">
             </div>
 
-            <div>
-                <label for="birthday">Syntymäpäivä</label>
-                <input type="date" name="birthday" id="birthday">
-            </div>
+            <label for="birthday">Syntymäpäivä</label>
+            <input type="date" name="birthday" id="birthday" required>
+
         </fieldset>
 
         <fieldset>
             <legend>Tunnistetiedot</legend>
-            <div>
-                <label for="email">Sähköposti:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
 
-            <div>
-                <label for="password">Salasana</label>
-                <input type="password" name="password" id="password">
-            </div>
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" required>
+
+
+            <label for="password">Salasana</label>
+            <input type="password" name="password" id="password" required>
+
         </fieldset>
-
-        <!-- <div>
-            Course
-        </div> -->
 
         <fieldset>
             <legend>Ehdot</legend>
-            <div>
-                <p>Haluatko saada päivityksiä sähköpostitse?</p>
-                <input type="radio" id="updates-yes" name="updates" value="kyllä" checked>
+
+            <p>Haluatko saada päivityksiä sähköpostitse?</p>
+
+            <div class="radio-option">
                 <label for="updates-yes">Kyllä</label>
-                <input type="radio" id="updates-no" name="updates" value="ei">
+                <input type="radio" id="updates-yes" name="updates" value="kyllä" checked>
+
                 <label for="updates-no">Ei</label>
+                <input type="radio" id="updates-no" name="updates" value="ei">
             </div>
 
-            <div>
-                <input type="checkbox" id="accept-terms" name="accept-terms" value="hyväksyä">
+            <div class="checkbox-option">
                 <label for="accept-terms">Hyväksyn käyttöehdot</label>
+                <input type="checkbox" id="accept-terms" name="accept-terms" value="hyväksyä" required>
             </div>
 
-            <div>
-                <button type="submit">Lähetä</button>
-                <button type="reset">Nollaa</button>
-            </div>
-
+            <button type="submit">Lähetä</button>
+            <button type="reset">Nollaa</button>
         </fieldset>
     </form>
 
-     <nav>
-            <a href="../index.html">Etusivulle</a>
-        </nav>
+    <nav>
+        <a href="../index.html">Etusivulle</a>
+    </nav>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artikkeli</title>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
             line-height: 1.6;
@@ -33,6 +34,39 @@
             max-width: 100%;
             height: auto;
         }
+
+        .info-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+       .navigation {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation li {
+            display: inline;
+            margin: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+        }
+
+        
+            
     </style>
 
 </head>
@@ -40,11 +74,12 @@
 <body>
     <!-- Change header and footer -->
     <header>
-        <nav aria-label="Päävalikko">
+        <nav class="navigation" aria-label="Päävalikko">
             <ul>
                 <li><a href="#historia">Historia</a></li>
                 <li><a href="#analyysi">Analyysi</a></li>
                 <li><a href="#vaikutus">Vaikutus</a></li>
+                <li><a href="../index.html">Etusivulle</a></li>
             </ul>
         </nav>
     </header>
@@ -62,13 +97,13 @@
                     </figcaption>
                 </figure>
                 <ul>
-                    <li>Tekijä: Vincent van Gogh</li>
-                    <li>Valmistumisvuosi: 1889</li>
-                    <li>Taiteenlaji: Maisemamaalaus</li>
-                    <li>Tekniikka: Öljyväri ja kangas</li>
-                    <li>Korkeus: 73 cm</li>
-                    <li>Leveys: 92 cm</li>
-                    <li>Museo: MoMA, New York</li>
+                    <li><strong>Tekijä:</strong> Vincent van Gogh</li>
+                    <li><strong>Valmistumisvuosi:</strong> 1889</li>
+                    <li><strong>Taiteenlaji:</strong> Maisemamaalaus</li>
+                    <li><strong>Tekniikka:</strong> Öljyväri ja kangas</li>
+                    <li><strong>Korkeus:</strong> 73 cm</li>
+                    <li><strong>Leveys:</strong> 92 cm</li>
+                    <li><strong>Museo:</strong> MoMA, New York</li>
                 </ul>
             </aside>
             <p>
@@ -162,10 +197,6 @@
     <footer>
         <p>Lähde: <a href="https://fi.wikipedia.org/wiki/T%C3%A4htikirkas_y%C3%B6#mwFQ" target="_blank"
                 rel="noopener noreferrer">Wikipedia</a></p>
-
-        <nav>
-            <a href="../index.html">Etusivulle</a>
-        </nav>
         <p>&copy; 2026 Violeta Bielinska</p>
     </footer>
 </body>
