@@ -32,14 +32,22 @@ body {
 }
 
 
+h3 {
+    margin: 0.5rem 0;
+}
+
 /* Links */
+ul {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: #354f52;
 }
 
 a:hover {
-    color: #52796f;
+    color: #84a98c;
 }
 
 a
