@@ -5,17 +5,19 @@
     <!--meta tegs-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tämä on Violeta Bielinskan verkkosivusto, jossa sisältää HTML oppimistehtäviä ja harjoituksia.">
+    <meta name="description"
+        content="Tämä on Violeta Bielinskan verkkosivusto, jossa sisältää HTML oppimistehtäviä ja harjoituksia.">
     <meta name="keywords" content="HTML, koulutus, verkkokehitys, harjoitukset, oppimistehtävät">
     <meta name="author" content="Violeta Bielinska">
 
     <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:title" content="Hei Maailma - Violeta Bielinskan verkkosivusto">
-    <meta property="og:description" content="Tämä on Violeta Bielinskan verkkosivusto, jossa sisältää HTML oppimistehtäviä ja harjoituksia.">
-    <meta property="og:image" content="image/hero-image.jpg"> <!-- An example image for social media sharing -->   
+    <meta property="og:description"
+        content="Tämä on Violeta Bielinskan verkkosivusto, jossa sisältää HTML oppimistehtäviä ja harjoituksia.">
+    <meta property="og:image" content="image/hero-image.jpg"> <!-- An example image for social media sharing -->
     <meta property="og:url" content="https://vbielinska.github.io/HTML-26/">
     <meta property="og:type" content="website">
-  
+
     <title>Hei Maailma</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -23,61 +25,81 @@
 
 <body>
     <header>
-        <h1>Hei Maailma!</h1>
-        <nav aria-label="päänavigatio">
-            <a href="#minusta">Minusta</a>
-            <a href="#harjoitukset">Tuntiharjoitukset</a>
-            <a href="yhteys.html" rel="noopener noreferrer" target="_blank">Yhteys</a>
+        <nav aria-label="päänavigatio" class="navbar">
+            <ul>
+                <li><a href="#minusta">Minusta</a></li>
+                <li><a href="#harjoitukset">Tuntiharjoitukset</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main>
         <section id="minusta">
-            <h2>Minusta</h2>
-            <p>Nimeni on <strong>Violeta</strong>, ja opiskelen verkkokehittäjäksi <strong>Keuda</strong>
-                ammattikoulussa. Opiskelen askel askeleelta verkkokehityksen tekniikoita, kuten HTML:ää, CSS:ää ja
-                JavaScriptiä. Tällä verkkosivulla on koottu oppimistehtäväni, ja sen sisältöä päivitetään vähitellen.
+            <h1>Hei Maailma!</h1>
+            <p>Nimeni on <strong>Violeta</strong>, ja opiskelen verkkokehittäjäksi <a href="https://www.keuda.fi/"
+                    target="_blank" rel="noopener noreferrer"><strong>Keuda</strong></a>
+                ammattikoulussa. Opiskelen askel askeleelta verkkokehityksen tekniikoita, kuten
+                <strong>HTML:ää</strong>, <strong>CSS:ää</strong> ja
+                <strong>JavaScriptiä</strong>. Tällä verkkosivulla on koottu oppimistehtäväni, ja sen sisältöä
+                päivitetään vähitellen.
             </p>
-            <!-- <figure><img src="" alt="Kuva kissasta" width="600"></figure> -->
-            <h3>Keudasta</h3>
-            <p>Keuda on ammatillinen oppilaitos Keski-Uudellamaalla. Se tarjoaa monipuolisia ammatillisia koulutuksia
-                eri aloilta ja antaa opiskelijoille käytännön taitoja työelämää varten. Käy <a href="https://www.keuda.fi/" target="_blank" rel="noopener noreferrer"><strong>Keudan
-                        sivulla</strong></a>. </p>
-
-            <!-- <figure>
-                <figcaption>Käy Keudan sivulla:</figcaption>
-                <a href="https://www.keuda.fi/" target="_blank" rel="noopener noreferrer"><img
-                        src="image/keuda-logo_musta.png"
-                        alt="Keudan ammatikoulun logo, joka johtaa kouluun verkkosivustolle" width="400"></a>
-            </figure> -->
         </section>
 
         <section id="harjoitukset">
             <h2>Tuntiharjoitukset</h2>
+
             <h3>Linkit ja kuvat</h3>
-            <a href="harjoitukset/kortti.html" target="_blank" rel="noopener noreferrer">Kortti</a>
-            <a href="harjoitukset/kuvagalleria.html" target="_blank" rel="noopener noreferrer">Kuvagalleria</a>
+            <ul>
+                <li><a href="harjoitukset/kortti.html" target="_blank" rel="noopener noreferrer">Kortti</a></li>
+                <li><a href="harjoitukset/kuvagalleria.html" target="_blank" rel="noopener noreferrer">Kuvagalleria</a>
+                </li>
+            </ul>
+
+
             <h3>HTML-listat</h3>
-            <a href="harjoitukset/harrastukset.html" target="_blank" rel="noopener noreferrer">Harrastukset</a>
+            <ul>
+                <li><a href="harjoitukset/harrastukset.html" target="_blank" rel="noopener noreferrer">Harrastukset</a>
+                </li>
+            </ul>
+
+
             <h3>HTML-taulukot</h3>
-            <a href="harjoitukset/taulukko.html" target="_blank" rel="noopener noreferrer">Taulukko</a>
-            <a href="harjoitukset/koulutusrakenne.html" target="_blank" rel="noopener noreferrer">Koulutusrakenne</a>
+            <ul>
+                <li><a href="harjoitukset/taulukko.html" target="_blank" rel="noopener noreferrer">Taulukko</a></li>
+                <li><a href="harjoitukset/koulutusrakenne.html" target="_blank"
+                        rel="noopener noreferrer">Koulutusrakenne</a></li>
+            </ul>
+
+
             <h3>HTML-lomakkeet</h3>
-            <a href="harjoitukset/rekisteröityminen.html" target="_blank"
-                rel="noopener noreferrer">Rekisteröityminen</a>
+            <ul>
+                <li><a href="harjoitukset/rekisteröityminen.html" target="_blank"
+                        rel="noopener noreferrer">Rekisteröityminen</a></li>
+                <li><a href="harjoitukset/yhteys.html" target="_blank" rel="noopener noreferrer">Yhteystietolomake</a>
+                </li>
+            </ul>
+
+
             <h3>Semanttinen HTML</h3>
-            <a href="harjoitukset/artikkeli.html" target="_blank" rel="noopener noreferrer">Artikkeli</a>
+            <ul>
+                <li><a href="harjoitukset/artikkeli.html" target="_blank" rel="noopener noreferrer">Artikkeli</a>
+                </li>
+            </ul>
+            </div>
+
             <h3>Multimedia HTML:ssa</h3>
-            <a href="harjoitukset/audio.html" target="_blank" rel="noopener noreferrer">Audio</a>
-            <a href="harjoitukset/video.html" target="_blank" rel="noopener noreferrer">Video</a>
-            <a href="harjoitukset/hero-picture.html" target="_blank" rel="noopener noreferrer">Responsiivenen hero-picture</a>
-            <h3>CSS harjoitukset</h3>
-            <a href="harjoitukset/taustakuva.html" target="_blank" rel="noopener noreferrer">Taustakuva</a>
+            <ul>
+                <li><a href="harjoitukset/audio.html" target="_blank" rel="noopener noreferrer">Audio</a></li>
+                <li><a href="harjoitukset/video.html" target="_blank" rel="noopener noreferrer">Video</a></li>
+                <li><a href="harjoitukset/hero-picture.html" target="_blank" rel="noopener noreferrer">Responsiivenen
+                        hero-picture</a></li>
+            </ul>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Violeta Bielinska</p>
+        <p>&copy; 2026 &verbar; <strong>Violeta Bielinska</strong></p>
     </footer>
 </body>
 
