@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas-esimerkki</title>
+</head>
+
+<body>
+    <h1>Canvas harjoitukset</h1>
+    <h2>Aihe 1: Mikä HTML Canvas on ja mihin sitä käytetään</h2>
+    <p>Hrjoitus: Luo HTML-tiedosto, jossa on Canvas-elementti. Kokeile muuttaa suorakulmion väriä punaiseksi ja
+        sijaintia niin, että se on Canvasin oikeassa yläkulmassa.</p>
+    <canvas id="piirtoalue" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        // Haetaan Canvas-elementti sen id:n perusteella   Поиск элемента Canvas по его идентификатору
+        const canvas = document.getElementById("piirtoalue");
+
+        // Luodaan 2D-piirtokonteksti / Создаем 2D-контекст рисования
+        const ctx = canvas.getContext("2d");
+
+        // Piirretään sininen suorakulmio  
+        ctx.fillStyle = "red";
+        ctx.fillRect(250, 50, 100, 80);  
+    </script>
+    <h2>Aihe 2: Canvas-elementin lisääminen HTML-sivulle</h2>
+    <p>Harjoitus: Luo HTML-tiedosto, jossa on kaksi Canvas-elementtiä eri id-attribuuteilla. Anna toiselle nimi
+        "canvas1" ja toiselle "canvas2". Aseta niille eri koot.</p>
+    <canvas id="canvas1" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <canvas id="canvas2" width="200" height="150" style="border: 1px solid #000;"></canvas>
+    <h3>Aihe 3: Canvasin koon asettaminen HTML:n ja CSS:n avulla</h3>
+    <p>Harjoitus: Luo Canvas-elementti, jonka HTML-attribuutit ovat width="300" ja height="200". Älä käytä CSS:ää.
+        Piirrä sinne suorakulmio.</p>
+    <canvas id="canvas_aihe3" width="300" height="200"></canvas>
+    <script>
+        const canvas3 = document.getElementById("canvas_aihe3");
+        const ctx3 = canvas3.getContext("2d");
+
+        ctx3.fillStyle = "red";
+        ctx3.fillRect(50, 50, 100, 80);
+    </script>
+    <h2>Aihe 4: 2D-piirtokontekstin hakeminen</h2>
+    <p>Harjoitus: Luo HTML-tiedosto, jossa on Canvas-elementti. Hae piirtokonteksti ja piirrä keltainen suorakulmio
+        Canvasin keskelle.</p>
+    <canvas id="canvas_aihe4" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas4 = document.getElementById("canvas_aihe4");
+        const ctx4 = canvas4.getContext("2d");
+
+        ctx4.fillStyle = "yellow"
+        ctx4.fillRect(50, 50, 300, 200)
+
+    </script>
+    <h2>Aihe 5: Canvasin koordinaatisto</h2>
+    <p>Harjoitus: Piirrä kolme eriväristä suorakulmiota eri kohtiin Canvasille. Yhden pitää olla vasemmassa yläkulmassa,
+        yhden oikeassa alakulmassa ja yhden keskellä.</p>
+    <canvas id="canvas_aihe5" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas5 = document.getElementById("canvas_aihe5");
+        const ctx5 = canvas5.getContext("2d");
+
+        // vasen yläkulma  
+        ctx5.fillStyle = "red";
+        ctx5.fillRect(0, 0, 150, 100);
+
+        // keskus 
+        ctx5.fillStyle = "blue";
+        ctx5.fillRect(125, 100, 150, 100);
+
+        // oikea alakulma
+        ctx5.fillStyle = "green";
+        ctx5.fillRect(250, 200, 150, 100);
+
+    </script>
+    <h2>Aihe 6: Suorakulmiot</h2>
+    <p>Harjoitus: Piirrä Canvasille täytetty suorakulmio ja sen päälle reunaviivalla varustettu suorakulmio. Käytä eri
+        värejä.</p>
+    <canvas id="canvas_aihe6" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas6 = document.getElementById("canvas_aihe6")
+        const ctx6 = canvas6.getContext("2d")
+
+        // Täytetty suorakulmio  
+        ctx6.fillStyle = "orange"
+        ctx6.fillRect(50, 50, 300, 200)
+
+        // Reunaviivalla varustettu suorakulmio  
+        ctx6.strokeStyle = "yellow"
+        ctx6.lineWidth = 2
+        ctx6.strokeRect(100, 100, 200, 100)
+    </script>
+    <h2>Aihe 7: Värit, reunaviivat, viivanpaksuus ja läpinäkyvyys</h2>
+    <p>Harjoitus: Piirrä Canvasille kaksi suorakulmiota, joista toinen on läpinäkyvä (käytä RGBA-väriä). Lisää myös yksi
+        reunaviivalla varustettu suorakulmio paksulla viivalla.</p>
+    <canvas id="canvas_aihe7" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas7 = document.getElementById("canvas_aihe7");
+        const ctx7 = canvas7.getContext("2d");
+
+        ctx7.fillStyle = "rgb(255, 51, 0)";
+        ctx7.fillRect(0, 0, 150, 100);
+
+        ctx7.fillStyle = "rgba(255, 51, 0, 0.5)";
+        ctx7.fillRect(100, 75, 200, 150)
+
+        ctx7.strokeStyle = "rgb(255, 51, 0)"
+        ctx7.lineWidth = 3;
+        ctx7.strokeRect(250, 200, 150, 100);
+    </script>
+
+    <h2>Aihe 8: Viivat ja polut</h2>
+    <p>Harjoitus: Piirrä Canvasille nelikulmio (neljän sivun muoto) käyttäen polkuja. Käytä moveTo() ja
+        lineTo()-menetelmiä.</p>
+    <canvas id="canvas_aihe8" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas8 = document.getElementById("canvas_aihe8");
+        const ctx8 = canvas8.getContext("2d");
+
+        ctx8.beginPath();
+        ctx8.moveTo(50, 50);
+        ctx8.lineTo(350, 50);
+        ctx8.lineTo(350, 250)
+        ctx8.lineTo(50, 250);
+        ctx8.closePath()
+        ctx8.fillStyle = "red";
+        ctx8.fill();  
+    </script>
+    <h2>Aihe 9: Ympyrät ja kaaret</h2>
+    <p>Harjoitus: Piirrä Canvasille kaksi erikokoista ympyrää eri väreillä. Yhden pitää olla täytetty ja toisen
+        reunaviivalla varustettu.</p>
+    <canvas id="canvas_aihe9" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas9 = document.getElementById("canvas_aihe9");
+        const ctx9 = canvas9.getContext("2d");
+
+        // Täytetty ympyrä
+        ctx9.beginPath();
+        ctx9.arc(200, 150, 110, 0, 2 * Math.PI); //Окружность с центром в точке (100, 150), радиус 50, полный круг (0 → 2π)
+        ctx9.fillStyle = "lightblue";
+        ctx9.fill();
+
+        // Reunaviivalla varustettu ympyrä
+        ctx9.beginPath();
+        ctx9.arc(200, 150, 120, 0, 2 * Math.PI);
+        ctx9.strokeStyle = "blue";
+        ctx9.lineWidth = 2;
+        ctx9.stroke();
+    </script>
+
+    <h2>Aihe 10: Teksti</h2>
+    <p>Harjoitus: Piirrä Canvasille teksti, joka sanoo "Tervetuloa!". Käytä isoa fonttia ja aseta teksti Canvasin
+        keskelle.</p>
+    <canvas id="canvas_aihe10" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas10 = document.getElementById("canvas_aihe10");
+        const ctx10 = canvas10.getContext("2d");
+
+        ctx10.font = "70px Arial";
+        ctx10.fillStyle = "orange";
+        ctx10.textAlign = "center";
+        ctx10.textBaseline = "middle";
+        ctx10.fillText("Tervetuloa!", 200, 150);  
+    </script>
+
+    <h2>Aihe 11: Kuvat</h2>
+    <p>Harjoitus: Luo HTML-tiedisto, jossa on Canvas-elementti. Lataa kuva ja piirrä se Canvasille. Käytä
+        onload-tapahtumaa varmistaaksesi, että kuva on ladattu ennen piirtämistä.</p>
+    <canvas id="canvas_aihe11" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas11 = document.getElementById("canvas_aihe11");
+        const ctx11 = canvas11.getContext("2d");
+
+        //  Luo uuden Image-objektin
+        const kuva = new Image();
+
+        //  Määrittää kuvan lähteen (URL tai tiedostopolku)
+        kuva.src = "https://uploads3.wikiart.org/00475/images/vincent-van-gogh/the-starry-night-1889.jpg!Large.jpg";
+
+        // Tapahtuma, joka suoritetaan, kun kuva on ladattu
+        kuva.onload = function () {
+            ctx11.drawImage(kuva, 0, 0, 400, 300);
+        };
+
+        //Piirtää kuvan kohtaan (150, 100)
+    </script>
+    <h2>Aihe 12: Tyhjentäminen ja uudelleenpiirtäminen</h2>
+    <p>Harjoitus: Luo Canvas, jossa on liikuva suorakulmio. Käytä clearRect()-menetelmää tyhjentämään Canvas joka
+        kierroksella.</p>
+    <canvas id="canvas_aihe12" width="400" height="300" style="border: 1px solid #000;"></canvas>
+    <script>
+        const canvas12 = document.getElementById("canvas_aihe12");
+        const ctx12 = canvas12.getContext("2d");
+
+        let x = 0;
+        let vari = "lightblue"
+
+        function piirra() {
+            // Tyhjennä koko Canvas  
+            ctx12.clearRect(0, 0, canvas12.width, canvas12.height);
+
+            // Päivitä sijainti
+            x = x + 3;
+
+            if (x > canvas12.width) {
+                x = 0;
+            }
+
+            // Меняем цвет в начале нового круга / Vaihdamme väriä uuden kierroksen alussa
+
+            if (vari === "lightblue") {
+                vari = "lightred";
+            } else {
+                vari = "lightblue"
+            }
+        }
+
+        // Pirrä suorakulmio uudessa sijainnissa
+        ctx12.fillStyle = vari;
+        ctx12.fillRect(x, 100, 50, 50);
+
+        // Pyydä seuraava kehys  
+        requestAnimationFrame(piirra);
+        }
+
+        // Aloita animaatio
+        piirra();
+    </script>
+
+    <h2>Aihe 13: Hiiri- ja näppäimistötapahtumat</h2>
+    <p>Harjoitus: Luo Canvas, joka piirtää suorakulmion sinne, missä käyttäjä klikkaa. Käytä getBoundingClientRect()
+        muuntaaksesi hiiren sijainnin Canvas-koordinaateiksi.</p>
+
+
+</body>
+
+</html>
