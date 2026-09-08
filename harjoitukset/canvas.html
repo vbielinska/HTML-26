@@ -196,35 +196,36 @@
         let vari = "lightblue"
 
         function piirra() {
-            // Tyhjennä koko Canvas  
+            // Tyhjennä koko Canvas  / очистить весь Canvas
             ctx12.clearRect(0, 0, canvas12.width, canvas12.height);
 
-            // Päivitä sijainti
+            // Päivitä sijainti / обновить положение
             x = x + 3;
 
             if (x > canvas12.width) {
                 x = 0;
+
+
+                // Меняем цвет в начале нового круга / Vaihdamme väriä uuden kierroksen alussa
+
+                if (vari === "lightblue") {
+                    vari = "lightcoral";
+                } else {
+                    vari = "lightblue";
+                }
             }
 
-            // Меняем цвет в начале нового круга / Vaihdamme väriä uuden kierroksen alussa
 
-            if (vari === "lightblue") {
-                vari = "lightred";
-            } else {
-                vari = "lightblue"
+                // Pirrä suorakulmio uudessa sijainnissa / Рисуем прямоугольник в новом положении
+                ctx12.fillStyle = vari;
+                ctx12.fillRect(x, 100, 50, 50);
+
+                // Pyydä seuraava kehys  
+                requestAnimationFrame(piirra);
             }
-        }
 
-        // Pirrä suorakulmio uudessa sijainnissa
-        ctx12.fillStyle = vari;
-        ctx12.fillRect(x, 100, 50, 50);
-
-        // Pyydä seuraava kehys  
-        requestAnimationFrame(piirra);
-        }
-
-        // Aloita animaatio
-        piirra();
+            // Aloita animaatio
+            piirra();
     </script>
 
     <h2>Aihe 13: Hiiri- ja näppäimistötapahtumat</h2>

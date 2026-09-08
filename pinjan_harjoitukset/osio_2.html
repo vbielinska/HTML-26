@@ -1,7 +1,5 @@
-<!-- 1. Rakenna tekstisivun perusrakenne -->
 <!DOCTYPE html>
 <html lang="fi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,49 +7,111 @@
 </head>
 
 <body>
-    <!-- 2. Tee looginen otsikkohierarkia  -->
-    <h1>Lorem Ipsum</h1>
-    <h2>Lorem</h2>
-    <h3>Ipsum</h3>
-    <!-- 3. Jaa teksti kappaleisiin -->
-    <p>HTML määrittelee verkkosivun rakenteen.</p>
-    <p>Otsikot ja kappaleet tekevät sisällöstä luettavaa.</p>
-    <p>HTML-elementit kannattaa valita niiden merkityksen mukaan.</p>
-    <!-- 4. Käytä br- ja hr-elementtejä oikein -->
-    <p>
-        Violeta Bielinska<br>
-        Katuosoite 1<br>
-        00100 Helsinki
-    </p>
+
+    <!-- 1. Tekstisivun perusrakenne -->
+
+    <header>
+        <h1>Internet ja verkkosivut</h1>
+        <p>Lyhyt artikkeli internetistä ja verkkosivujen kehittämisestä.</p>
+    </header>
+
     <hr>
-    <p>Seuraavaksi kerrotaan yhteystiedoista.</p>
-    <!-- 5. Käytä strong-, em-, mark- ja small-elementtejä -->
-    <p>
-        <strong>Muista tallentaa tehtävä.</strong>
-        HTML on <em>merkintäkieli</em>.
-        Tänään harjoittelemme <mark>tekstielementtejä</mark>.
-        <small>Tehtävä tehdään itsenäisesti.</small>
-    </p>
-    <!-- 6. Harjoittele ylä- ja alaindeksiä -->
-    <p>2<sup>3</sup> = 8</p>
-    <p>H<sub>2</sub>O on veden kemiallinen kaava.</p>
-    <!-- 7. Esitä koodia ja lyhenne oikein -->
-    <p>Käytä <code>console.log()</code>-komentoa tulostamiseen.</p>
 
-    <pre><code>const nimi = "Ada";console.log(nimi);</code></pre>
+    <main>
 
-    <p>
-        <abbr title="HyperText Markup Language">HTML</abbr>
-        on verkkosivujen merkintäkieli.
-    </p>
-    <!-- 8. Rakenna lyhyt artikkeli -->
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ut possimus soluta. Corporis nihil ducimus itaque
-        quos, facere inventore quasi odio. Iure commodi odit, porro a soluta aliquam ad alias, quaerat reprehenderit
-        dolorem placeat rerum? Quas, in. Dolorum recusandae ratione explicabo aliquid eius et harum, consectetur cum
-        voluptatibus repudiandae excepturi cupiditate earum qui odio consequuntur doloribus accusantium, quibusdam quia
-        assumenda, fuga beatae id velit! Nobis explicabo asperiores doloremque autem incidunt aspernatur adipisci
-        eligendi distinctio quasi vel quo est, totam quia mollitia velit iure vitae culpa unde necessitatibus inventore
-        iusto voluptatibus cumque. Veniam optio illo voluptas minima repellat rerum voluptate dolorum.</p>
+        <!-- 2. Looginen otsikkohierarkia -->
+
+        <h2>Mikä on internet?</h2>
+
+        <!-- 3. Tekstin jakaminen kappaleisiin -->
+
+        <p>
+            Internet on maailmanlaajuinen tietoverkko, jonka avulla ihmiset
+            voivat jakaa tietoa ja kommunikoida keskenään. Internetissä voidaan
+            esimerkiksi lukea uutisia, katsoa videoita ja käyttää erilaisia palveluita.
+        </p>
+
+        <p>
+            Verkkosivut ovat yksi tärkeä osa internetiä. 
+            <strong>HTML</strong> avulla voidaan rakentaa verkkosivun rakenne.
+            <em>CSS</em> avulla sivulle voidaan tehdä ulkoasu ja JavaScriptillä
+            voidaan lisätä toiminnallisuutta.
+        </p>
+
+        <br>
+
+        <h2>Verkkosivun rakenne</h2>
+
+        <h3>HTML</h3>
+
+        <p>
+            HTML tarkoittaa sanoja <strong>HyperText Markup Language</strong>.
+            Se määrittelee verkkosivun rakenteen ja sisällön.
+        </p>
+
+        <p>
+            Esimerkiksi otsikko voidaan kirjoittaa näin:
+        </p>
+
+        <!-- 7. Koodin esittäminen oikein -->
+
+        <pre><code>&lt;h1&gt;Tervetuloa verkkosivulle!&lt;/h1&gt;</code></pre>
+
+        <h3>CSS</h3>
+
+        <p>
+            CSS:n avulla voidaan muuttaa esimerkiksi tekstin kokoa,
+            väriä ja verkkosivun asettelua.
+            <mark>Hyvä ulkoasu tekee verkkosivusta helpomman käyttää.</mark>
+        </p>
+
+        <hr>
+
+        <h2>Teknologia arjessa</h2>
+
+        <p>
+            Teknologia on tärkeä osa ihmisten jokapäiväistä elämää.
+            Älypuhelimet, tietokoneet ja erilaiset verkkopalvelut ovat
+            käytössä lähes joka päivä.
+        </p>
+
+        <!-- 6. Ylä- ja alaindeksi -->
+
+        <p>
+            Vesi voidaan esittää kemiallisena kaavana H<sub>2</sub>O.
+            Matematiikassa voidaan esimerkiksi kirjoittaa 2<sup>3</sup> = 8.
+        </p>
+
+        <h3>Turvallisuus internetissä</h3>
+
+        <p>
+            Internetiä käytettäessä on tärkeää huolehtia omasta
+            tietoturvasta. Salasanan pitäisi olla riittävän pitkä ja
+            vaikea arvata. <strong>Älä koskaan jaa salasanaasi muille.</strong>
+        </p>
+
+        <br>
+
+        <!-- 7. Lyhenne -->
+
+        <p>
+            <abbr title="HyperText Markup Language">HTML</abbr> on
+            verkkosivujen rakentamiseen käytettävä merkintäkieli.
+        </p>
+
+        <!-- 5. small-elementti -->
+
+        <small>
+            Teksti on tehty HTML-harjoitusta varten.
+        </small>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Violeta</p>
+    </footer>
+
 </body>
-
 </html>
