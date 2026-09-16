@@ -1,0 +1,30 @@
+article>h2 {
+    color: lightsalmon;
+}
+
+h2+p {
+    color: lightskyblue
+}
+
+section p:first-child {
+    color: lightseagreen;
+}
+
+input[type="email"] {
+    border: grey 1px solid;
+}
+input[:required] {
+    background-color: lightyellow;
+}
+
+input:focus-visible {
+    outline: 2px solid lightsalmon;
+}
+input:checked {
+    accent-color: lightgreen;
+}
+
+form-group:has(input:invalid) {
+    border: 2px solid red;
+    padding: 10px;
+}
