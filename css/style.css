@@ -11,26 +11,6 @@ body {
     color: #2f3e46;
 }
 
-/* Header */
-
-.navbar ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #354f52;
-  font-weight: bolder;
-  border-radius: 5px;
-}
-
 
 h3 {
     margin: 0.5rem 0;
