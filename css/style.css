@@ -36,12 +36,13 @@ a
 
 table {
     border-collapse: collapse;
-    padding: 0.75rem;
+    border-spacing: 0px;
 }
+
 
 th,
 td {
-    border: 1px solid;
+    border: 1px solid black;
     padding: 0.75rem;
 }
 
@@ -70,6 +71,10 @@ button {
 
 footer {
     text-align: center;
+    margin-top: 1rem;
 }
 
 
+footer a {
+    font-weight: bold;
+}
