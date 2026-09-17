@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: justify;
     margin: 0 auto;
@@ -35,7 +39,7 @@ h1 {
 
 .resepti_1 {
     flex: 1;
-    border-right: indigo 1px solid;
+    border-right: rgb(178, 162, 189) 1px solid;
     padding: 3rem;
     margin: 1rem auto;
     color: rgb(79, 43, 147);
