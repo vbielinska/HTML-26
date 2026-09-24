@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: justify;
     margin: 0 auto;
@@ -9,35 +13,41 @@ body {
     background-color: #FCF7FF;
 }
 
+.container {
+    display: flex;
+}
+
 
 /* Otsikkot */
 h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 400;
+    border-radius: 15px;
     font-size: 4rem;
     text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:#A4508B;
+    color: #A4508B;
+    background-color: #a4508b2c;
 }
 
-
-
-footer {
-    text-align: justify;
-    border-radius: 12px;
-    padding: 30px;
-    background-color: #f3e0fc;
-}
 
 .important {
     font-style: italic;
     font-weight: 300;
-    color:#A4508B; 
+    color: #A4508B;
 }
 
 .resepti_1 {
-    padding: 1rem;
-    color:#4062BB;
+    flex: 1;
+    border-right: rgb(178, 162, 189) 1px solid;
+    padding: 3rem;
+    margin: 1rem auto;
+    color: rgb(79, 43, 147);
 }
+
 .resepti_2 {
-    padding: 1rem;
-    color:rgb(79, 43, 147);
+    flex: 1;
+    padding: 3rem;
+    margin: 1rem auto;
+    color: #4062BB;
 }
