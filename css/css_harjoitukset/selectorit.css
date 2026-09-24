@@ -13,9 +13,6 @@ section p:first-child {
 input[type="email"] {
     border: grey 1px solid;
 }
-input[:required] {
-    background-color: lightyellow;
-}
 
 input:focus-visible {
     outline: 2px solid lightsalmon;
