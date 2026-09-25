@@ -1,0 +1,15 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.card--featured{
+    grid-column: span 2;
+}
